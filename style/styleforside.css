@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(19, 19, 19);
+  background-image: url("/images/background.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.planets {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.rummand {
+  z-index: 5;
+  position: absolute;
+  display: flex;
+  bottom: 36vh;
+  left: 14vw;
+  gap: 20px;
+}
+
+.rummand img {
+  width: 7vw;
+  height: auto;
+  display: block;
+  transform: rotate(7deg);
+}
+
+.raket {
+  z-index: 5;
+  position: absolute;
+  display: flex;
+  bottom: 30vh;
+  left: 22vw;
+  gap: 20px;
+}
+
+.raket img {
+  width: 9vw;
+  height: auto;
+  display: block;
+  transform: rotate(25deg); /* Rotates the image 45 degrees clockwise */
+}
+
+.headline h1 {
+  color: var(--Hvid, #fff);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.headline h2 {
+  color: var(--Hvid, #fff);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.startknap a {
+  padding: 32px;
+  border-radius: 40px;
+  background: #ed6000;
+  color: var(--Hvid, #fff);
+  font-family: "Lilita One";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.startknap a:active {
+  transition: ease-out 0.05s;
+  padding: 42px;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.slideknap {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.slideknap {
+  padding: 15px;
+}
+
+.sliding-billede {
+  position: fixed;
+  left: -100%;
+  transition: left 0.5s ease;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.slide-in {
+  left: 5vw;
+}
+
+.gemforside {
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.lukknap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  display: none;
+}
+
+.planets {
+  animation: 0.3s slide ease-out forwards;
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.rummand,
+.raket {
+  animation: 0.3s slide2 ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+@keyframes slide2 {
+  from {
+    transform: translateX(-400%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
