@@ -6,9 +6,10 @@
 
 body {
   background-color: rgb(19, 19, 19);
-  background-image: url("/images/background.png");
+  background-image: url("/videos/stjerneskud.mp4");
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 
 .startknap a {
@@ -23,13 +24,22 @@ body {
   line-height: normal;
   text-decoration: none;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.headline h1,
-h2 {
+.headline h1 {
+  color: var(--Hvid, #fff);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.headline h2 {
   color: var(--Hvid, #fff);
   text-align: center;
   font-family: Nunito;
@@ -54,4 +64,72 @@ h2 {
   top: 0;
   right: 0;
   padding: 15px;
+}
+
+.planets {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 125%;
+  left: 50%;
+  overflow: hidden;
+}
+
+.rummand {
+  z-index: 5;
+  position: absolute;
+  display: flex;
+  bottom: 17vh;
+  left: 40%;
+  gap: 20px;
+}
+
+.rummand img {
+  width: 12vw;
+  height: auto;
+  display: block;
+  transform: rotate(7deg);
+}
+
+.raket {
+  z-index: 5;
+  position: absolute;
+  display: flex;
+  bottom: 19vh;
+  left: 50%;
+  gap: 20px;
+}
+
+.raket img {
+  width: 9vw;
+  height: auto;
+  display: block;
+  transform: rotate(7deg); /* Rotates the image 45 degrees clockwise */
+  animation: 2s raketlander ease-out forwards;
+}
+
+.headline {
+  margin-top: 6vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@keyframes raketlander {
+  from {
+    transform: translateY(-100%);
+    transform: translate(100%, -50%);
+  }
+  to {
+    transform: translateX(0);
+    transform: rotate(8deg);
+  }
+}
+
+#myVideo {
+  z-index: -1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
