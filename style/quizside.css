@@ -12,8 +12,8 @@ body {
   background-size: cover;
 }
 
-/*Spørgsmålet*/
-p {
+/*Spørgsmålet øverst på siden style*/
+h1 {
   color: white;
   text-align: center;
   font-family: Nunito;
@@ -22,6 +22,26 @@ p {
   font-weight: 300;
   line-height: normal;
 }
+
+/* ------ tegnene*/
+p {
+  color: white;
+  text-align: center;
+  font-family: Nunito;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+#planeterne {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+
 
 
 .slideknap {
@@ -51,7 +71,7 @@ p {
   transition: opacity 0.2s ease-in;
 }
 
-.lukknapinfo {
+.lukknap {
   position: absolute;
   top: 0;
   right: 0;
@@ -59,9 +79,3 @@ p {
   display: none;
 }
 
-.lukknap {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 15px;
-}
