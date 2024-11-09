@@ -4,9 +4,64 @@
   box-sizing: border-box;
 }
 
+/*Baggrund på siden*/
 body {
   background-color: rgb(19, 19, 19);
   background-image: url("/images/background.png");
   background-position: center;
   background-size: cover;
+}
+
+/*Spørgsmålet*/
+p {
+  color: white;
+  text-align: center;
+  font-family: Nunito;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+
+.slideknap {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.slideknap {
+  padding: 15px;
+}
+
+.sliding-billede {
+  position: fixed;
+  left: -100%;
+  transition: left 0.5s ease;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.slide-in {
+  left: 5vw;
+}
+
+.gemforside {
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.lukknapinfo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  display: none;
+}
+
+.lukknap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
 }
