@@ -14,19 +14,33 @@
     />
   </head>
   <body>
-    <!--Spørgsmålssektionen-->
-      <div id="spørgsmålene">
+      <!--Lukknappen så man går til forsiden - venstre side-->
+      <div class="lukknapforside">
+        <a href="index.html"><img src="/images/krydsknap.png" alt="lukknap" /></a>
+      </div>
+     
       <!--Spørgsmål nr. 1-->
       <h1> 
         Hvordan blev solen dannet?
       </h1> 
+
       <!--Svarmulighederne-->
+      <div id="svarmulighederne_et">
       <button id="korrekt">I en stjernetåge</button> 
       <button class="forkert">Ved en eksplosion</button>
+      </div>
+
+      <div id="svarmulighederne_to">
       <button class="forkert">Ved kollision</button> 
       <button class="forkert">Det er uvist</button>
       </div>
 
+      <!--pilknapperne i bunden der skal gå frem og tilbage i spørgsmålene-->
+      <div id="pilknapperne">
+      <img id="pilmodvenstre" src="images/pilmodvenstre.png" alt="pil knap mod venstre">
+      <img id="pilmodhøjre" src="images/pilmodhøjre.png" alt="pilknap mod højre">
+      </div>
+    
       <!--Spørgsmålsknappen-->
       <div class="slideknap">
         <img src="/images/questionicon.svg" alt="spørgsmålsknap" />
@@ -44,15 +58,12 @@
         <img src="/images/krydsknap.png" alt="lukknap til info" />
       </div>
 
-      <!--Lukknappen så man går til forsiden - venstre side-->
-      <div class="lukknapforside">
-        <a href="index.html"><img src="/images/krydsknap.png" alt="lukknap" /></a>
-      </div>
-
+      <!--Det nederste på siden med planeterne og raketen der rykker sig imellem-->
       <div id="planeterne">
-        <img src="images/månenfuld.png" alt="månen i fuld str.">
+        <img class="planetbilleder" src="images/månenfuld.png" alt="månen i fuld str.">
+        <img id="raketderflyver" src="images/raketmedild.png" alt="raket der flyver">
         <p>- - - - - - - - - -</p>
-        <img src="images/jordenfuld.png" alt="jorden i fuld str.">
+        <img class="planetbilleder" src="images/jordenfuld.png" alt="jorden i fuld str.">
       </div>
 
   </body>

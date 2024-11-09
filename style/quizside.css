@@ -19,8 +19,9 @@ h1 {
   font-family: Nunito;
   font-size: 40px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   line-height: normal;
+  padding-top: 30px;
 }
 
 /* ------ tegnene*/
@@ -28,22 +29,74 @@ p {
   color: white;
   text-align: center;
   font-family: Nunito;
-  font-size: 80px;
+  font-size: 100px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 200;
   line-height: normal;
 }
 
+/*planeterne og raketen nederst*/
 #planeterne {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
 
+.planetbilleder {
+  width: 180px; /*str på planeterne nederst*/
+  height: auto;
 }
 
 
+/*style af de fire svarmuligheder*/
+#korrekt, .forkert {
+  padding: 32px;
+  margin: 10px; /*space omkring knapperne*/
+  border-radius: 40px;
+  background: #ed6000;
+  color: var(--Hvid, #fff);
+  font-family: "Lilita One";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  flex-basis: 100%; /*gør at knapperne bliver lige store uanset hvor meget tekst der er i*/
+}
 
+/*de fire svarmuligheder - delt i to for at få placeringen som den er*/
+#svarmulighederne_et {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-top: 40px;
+}
 
+#svarmulighederne_to {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-bottom: 50px;
+}
+
+/*pilknapperne til at gå mellem spørgsmålene*/
+#pilknapperne {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+
+/*raketens position*/
+#raketderflyver {
+  position: absolute;
+  bottom: 108px;
+  left: 248px;
+}
+
+/*til slidein af infografikken*/
 .slideknap {
   position: absolute;
   top: 0;
@@ -71,11 +124,20 @@ p {
   transition: opacity 0.2s ease-in;
 }
 
+
+/*krydsknappen indeni infografikken*/
 .lukknap {
   position: absolute;
   top: 0;
   right: 0;
   padding: 15px;
-  display: none;
+  display: none; /*knappen skal væk - og findes frem i scriptet, når spørgsmålstegnet bliver trykket*/
+}
+
+/*krydsknappen så man går ud af quizzen og til forsiden*/
+.lukknapforside {
+  top: 0;
+  right: 0;
+  padding: 15px;
 }
 
