@@ -49,14 +49,14 @@ p {
 
 
 /*style af de fire svarmuligheder*/
-#korrekt, .forkert {
-  padding: 32px;
+#korrekt, #forkert_et, #forkert_to, #forkert_tre {
+  padding: 40px;
   margin: 10px; /*space omkring knapperne*/
   border-radius: 40px;
   background: #ed6000;
-  color: var(--Hvid, #fff);
+  color: white;
   font-family: "Lilita One";
-  font-size: 32px;
+  font-size: 23px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -68,8 +68,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 250px;
-  padding-right: 250px;
+  padding-left: 300px;
+  padding-right: 300px;
   padding-top: 40px;
 }
 
@@ -77,8 +77,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 250px;
-  padding-right: 250px;
+  padding-left: 300px;
+  padding-right: 300px;
   padding-bottom: 50px;
 }
 
@@ -92,7 +92,7 @@ p {
 /*raketens position*/
 #raketderflyver {
   position: absolute;
-  bottom: 108px;
+  bottom: 95px;
   left: 248px;
 }
 
@@ -119,11 +119,10 @@ p {
   left: 5vw;
 }
 
-.gemforside {
+.gemquiz {
   opacity: 0;
   transition: opacity 0.2s ease-in;
 }
-
 
 /*krydsknappen indeni infografikken*/
 .lukknap {

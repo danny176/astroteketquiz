@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Astroteket quiz</title>
     <link rel="stylesheet" href="style/quizside.css" />
-    <script src="/js/jsforside.js" defer></script>
+    <script src="/js/quiz.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,19 +20,19 @@
       </div>
      
       <!--Spørgsmål nr. 1-->
-      <h1> 
+      <h1 id="spr"> 
         Hvordan blev solen dannet?
       </h1> 
 
       <!--Svarmulighederne-->
       <div id="svarmulighederne_et">
       <button id="korrekt">I en stjernetåge</button> 
-      <button class="forkert">Ved en eksplosion</button>
+      <button id="forkert_et">Ved en eksplosion</button>
       </div>
 
       <div id="svarmulighederne_to">
-      <button class="forkert">Ved kollision</button> 
-      <button class="forkert">Det er uvist</button>
+      <button id="forkert_to">Ved kollision</button> 
+      <button id="forkert_tre">Det er uvist</button>
       </div>
 
       <!--pilknapperne i bunden der skal gå frem og tilbage i spørgsmålene-->
