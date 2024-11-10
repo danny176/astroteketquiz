@@ -90,12 +90,26 @@ const spr10_forkert_to = "Rester fra en satelit";
 const spr10_forkert_tre = "En samling af stjerner";
 
 
+const scoreDisplay = document.getElementById("score");
 
+
+let score = 0;
 let nuvaerendeStep = 1;
+
+function opdaterScore() {
+    document.getElementById("score").innerText = `${score}/10`;
+}
+
+
 
 // Event listeners:
 
-btn_korrekt.addEventListener("click", videreispr);
+btn_korrekt.addEventListener("click", function () {
+    score++; // Øg scoren kun ved korrekt svar
+    opdaterScore(); // Opdater visningen af scoren
+    videreispr(); // Gå videre til næste spørgsmål
+});
+
 btn_forkert_et.addEventListener("click", videreispr);
 btn_forkert_to.addEventListener("click", videreispr);
 btn_forkert_tre.addEventListener("click", videreispr);
@@ -110,8 +124,9 @@ function videreispr (){
         btn_forkert_et.innerHTML = spr2_forkert_et;
         btn_forkert_to.innerHTML = spr2_forkert_to;
         btn_forkert_tre.innerHTML = spr2_forkert_tre;
-        document.getElementById("raketderflyver").style.left = "320px";
 
+        document.getElementById("raketderflyver").style.left = "320px";
+         
     }else if(nuvaerendeStep == 2){
         nuvaerendeStep++;
         //teksten til spr3:
@@ -205,9 +220,7 @@ function videreispr (){
 };
 
 
-document.getElementById("korrekt").addEventListener("click", () => {
-    document.getElementById("korrekt").style.backgroundColor = "green";
-  }); 
+
 
 
 
