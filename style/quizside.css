@@ -10,6 +10,7 @@ body {
   background-image: url("/images/background.png");
   background-position: center;
   background-size: cover;
+  height: 100vh;
 }
 
 /*Spørgsmålet øverst på siden style*/
@@ -37,6 +38,7 @@ p {
 
 /*planeterne og raketen nederst*/
 #planeterne {
+  margin-top: 2vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -52,7 +54,7 @@ p {
 #forkert_et,
 #forkert_to,
 #forkert_tre {
-  padding: 10px;
+  padding: 20px;
   margin: 10px; /*space imellem knapperne*/
   border-radius: 40px;
   background: #ed6000;
@@ -62,40 +64,31 @@ p {
   font-style: normal;
   line-height: normal;
   width: 300px; /* Fast bredde på knapperne */
-  height: 110px; /* Fast højde på knapperne */
+  height: 150px; /* Fast højde på knapperne */
   text-align: center; /* Centrerer teksten */
 }
 
 /*de fire svarmuligheder - delt i to for at få placeringen som den er*/
 #svarmulighederne_et {
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding-left: 300px;
   padding-right: 300px;
   padding-top: 40px;
 }
 
 #svarmulighederne_to {
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding-left: 300px;
   padding-right: 300px;
   padding-bottom: 50px;
 }
 
-/*pilknapperne til at gå mellem spørgsmålene*/
-#pilknapperne {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 30px;
-}
-
 /*raketens position*/
 #raketderflyver {
   position: absolute;
-  bottom: 95px;
+  bottom: 94px;
   left: 248px;
 }
 
@@ -113,7 +106,7 @@ p {
 .sliding-billede {
   position: fixed;
   left: -100%;
-  transition: left 0.5s ease;
+  transition: left 0.5s ease-in;
   transform: translateY(-50%);
   top: 50%;
 }
