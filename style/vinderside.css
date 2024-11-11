@@ -13,6 +13,7 @@ body {
 }
 
 .startknap a {
+  z-index: 1; 
   padding: 32px;
   border-radius: 40px;
   background: #ed6000;
@@ -79,12 +80,12 @@ body {
   position: absolute;
   display: flex;
   bottom: 12vh;
-  left: 40%;
+  left: 38%;
   gap: 20px;
 }
 
 .rummand img {
-  width: 12vw;
+  width: 13vw;
   height: auto;
   display: block;
   transform: rotate(7deg);
@@ -103,7 +104,7 @@ body {
   width: 9vw;
   height: auto;
   display: block;
-  transform: rotate(7deg); /* Rotates the image 45 degrees clockwise */
+  transform: rotate(7deg);
   animation: 2s raketlander ease-out forwards;
 }
 
