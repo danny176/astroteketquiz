@@ -2,15 +2,15 @@
 document.addEventListener("DOMContentLoaded", function () {
   const startButton = document.querySelector(".startknap");
   const link = document.getElementById("start-quiz-link");
-  const sound = new Audio("lyde/intro_quiz.wav"); 
+  const startLyd = new Audio("lyde/intro_quiz.wav");
 
   startButton.addEventListener("click", function (event) {
-    event.preventDefault(); // Stop at linket redirecter dig til en ny side med det samme, og først efter at lyden har afspillet. 
+    event.preventDefault(); // Stop at linket redirecter dig til en ny side med det samme, og først efter at lyden har afspillet.
 
-    sound.play(); // spil min sfx
+    startLyd.play(); // spil min sfx
 
     // Redirect efter lyd er afsluttet
-    sound.addEventListener("ended", function () {
+    startLyd.addEventListener("ended", function () {
       window.location.href = link.href;
     });
   });

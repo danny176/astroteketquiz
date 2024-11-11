@@ -1,3 +1,5 @@
+/* Global css der hjælper på layout */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +12,8 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+/* General styling og layout af billederne */
 
 .planets {
   display: flex;
@@ -50,8 +54,10 @@ body {
   width: 9vw;
   height: auto;
   display: block;
-  transform: rotate(25deg); /* Rotates the image 45 degrees clockwise */
+  transform: rotate(25deg);
 }
+
+/* Styling af font og link knap */
 
 .headline h1 {
   color: var(--Hvid, #fff);
@@ -124,6 +130,8 @@ body {
   left: 5vw;
 }
 
+/* Class der tilføjes ved hjælp af JS, for at gemme elementer når infografikken bliver synlig */
+
 .gemforside {
   opacity: 0;
   transition: opacity 0.2s ease-in;
@@ -140,6 +148,8 @@ body {
 .planets {
   animation: 0.3s slide ease-out forwards;
 }
+
+/* Animation til billederne på forsiden */
 
 @keyframes slide {
   from {

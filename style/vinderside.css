@@ -12,6 +12,8 @@ body {
   overflow: hidden;
 }
 
+/* Styler og putter layout for knappen */
+
 .startknap a {
   z-index: 1; 
   padding: 32px;
@@ -29,6 +31,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* Overskrift styling og layout */
 
 .headline h1 {
   color: var(--Hvid, #fff);
@@ -66,6 +70,8 @@ body {
   right: 0;
   padding: 15px;
 }
+
+/* Styling, layout og animation af billederne */
 
 .planets {
   position: absolute;
@@ -125,6 +131,8 @@ body {
     transform: rotate(8deg);
   }
 }
+
+/* Sætter en transparent video ind på tabersiden som looper. Den er spejlvendt for at matche med direktionen raketten kommer ind fra  */
 
 #animationVideo {
   width: 100%;
