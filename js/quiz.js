@@ -117,14 +117,21 @@ function goForward() {
   }
 }
 
+//Indsætter lyde til korrekt og forkert svar
+const korrektSound = new Audio("lyde/rigtig.mp3"); 
+const forkertSound = new Audio("lyde/forkert.mp3"); 
+
+
 function updateButtonColors() {
   // Sætter knappernes farve baseret på tidligere valg - så den forbliver når man går frem og tilbage mellem spørgsmålene
   buttons.forEach((button, index) => {
     if (userAnswers[nuvaerendeStep] === index) {
       if (index === quizData[nuvaerendeStep].correct) {
         button.style.backgroundColor = "green"; // Korrekt svar
+        korrektSound.play(); //Lyd afspilles ved korrekt svar
       } else {
         button.style.backgroundColor = "red"; // Forkert svar
+        forkertSound.play();
       }
     } else {
       button.style.backgroundColor = ""; // Reset farven for ikke-valgte knapper

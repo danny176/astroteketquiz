@@ -1,3 +1,21 @@
+//Afspil lyd når du klikker på start quiz
+document.addEventListener("DOMContentLoaded", function () {
+  const startButton = document.querySelector(".startknap");
+  const link = document.getElementById("start-quiz-link");
+  const sound = new Audio("lyde/intro_quiz.wav"); 
+
+  startButton.addEventListener("click", function (event) {
+    event.preventDefault(); // Stop at linket redirecter dig til en ny side med det samme, og først efter at lyden har afspillet. 
+
+    sound.play(); // spil min sfx
+
+    // Redirect efter lyd er afsluttet
+    sound.addEventListener("ended", function () {
+      window.location.href = link.href;
+    });
+  });
+});
+
 //Array som gemmer forside elementer når slideknap bliver klikket. Bliver gjort ved at tilføje gemforside class som har opacity 0 værdi.
 document.querySelector(".slideknap").addEventListener("click", function () {
   const gemForside = [
