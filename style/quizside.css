@@ -50,17 +50,19 @@ p {
 
 /*style af de fire svarmuligheder*/
 #korrekt, #forkert_et, #forkert_to, #forkert_tre {
-  padding: 40px;
-  margin: 10px; /*space omkring knapperne*/
+  padding: 10px;
+  margin: 10px; /*space imellem knapperne*/
   border-radius: 40px;
   background: #ed6000;
   color: white;
   font-family: "Lilita One";
   font-size: 23px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
-  flex-basis: 100%; /*gør at knapperne bliver lige store uanset hvor meget tekst der er i*/
+  width: 260px; /* Fast bredde på knapperne */
+  height: 110px; /* Fast højde på knapperne */
+  text-align: center; /* Centrerer teksten */
+  
 }
 
 /*de fire svarmuligheder - delt i to for at få placeringen som den er*/
