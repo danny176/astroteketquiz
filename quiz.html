@@ -14,60 +14,79 @@
     />
   </head>
   <body>
-      <!--Lukknappen så man går til forsiden - venstre side-->
-      <div class="lukknapforside">
-        <a href="index.html"><img src="/images/krydsknap.png" alt="lukknap" /></a>
-      </div>
-     
-      <!--Spørgsmål nr. 1-->
-      <h1 id="spr"></h1> 
+    <!--Lukknappen så man går til forsiden - venstre side-->
+    <div class="lukknapforside">
+      <a href="index.html"><img src="/images/krydsknap.png" alt="lukknap" /></a>
+    </div>
 
-      <!--Svarmulighederne-->
-      <div id="svarmulighederne_et">
-      <button id="korrekt"></button> 
+    <!--Spørgsmål nr. 1-->
+    <h1 id="spr"></h1>
+
+    <!--Svarmulighederne-->
+    <div id="svarmulighederne_et">
+      <button id="korrekt"></button>
       <button id="forkert_et"></button>
-      </div>
+    </div>
 
-      <div id="svarmulighederne_to">
-      <button id="forkert_to"></button> 
+    <div id="svarmulighederne_to">
+      <button id="forkert_to"></button>
       <button id="forkert_tre"></button>
-      </div>
+    </div>
 
-      <!--pilknapperne i bunden der skal gå frem og tilbage i spørgsmålene-->
-      <div id="pilknapperne">
-      <img id="pilmodvenstre" src="images/pilmodvenstre.png" alt="pil knap mod venstre">
-      <img id="pilmodhøjre" src="images/pilmodhøjre.png" alt="pilknap mod højre">
-      </div>
-    
-      <!--Spørgsmålsknappen-->
-      <div class="slideknap">
-        <img src="/images/questionicon.svg" alt="spørgsmålsknap" />
-      </div>
-  
-      <!--Infografikken-->
+    <!--pilknapperne i bunden der skal gå frem og tilbage i spørgsmålene-->
+    <div id="pilknapperne">
       <img
-        src="/images/infografik.svg"
-        alt="Sliding Image"
-        class="sliding-billede"
+        id="pilmodvenstre"
+        src="images/pilmodvenstre.png"
+        alt="pil knap mod venstre"
       />
-  
-      <!--Lukknappen til infografikken - højre side-->
-      <div class="lukknap">
-        <img src="/images/krydsknap.png" alt="lukknap til info" />
-      </div>
+      <img
+        id="pilmodhøjre"
+        src="images/pilmodhøjre.png"
+        alt="pilknap mod højre"
+      />
+    </div>
 
-      <!--Det nederste på siden med planeterne og raketen der rykker sig imellem-->
-      <div id="planeterne">
-        <img class="planetbilleder" src="images/månenfuld.png" alt="månen i fuld str.">
-        <img id="raketderflyver" src="images/raketmedild.png" alt="raket der flyver">
-        <p>- - - - - - - - - -</p>
-        <img class="planetbilleder" src="images/jordenfuld.png" alt="jorden i fuld str.">
-      </div>
+    <!--Spørgsmålsknappen-->
+    <div class="slideknap">
+      <img src="/images/questionicon.svg" alt="spørgsmålsknap" />
+    </div>
 
-        <!--Score sektionen-->
-        
-          <p id="score"></p> <!-- Score vises her og opdateres i JavaScript -->
-        
+    <!--Infografikken-->
+    <img
+      src="/images/infografik.svg"
+      alt="Sliding Image"
+      class="sliding-billede"
+    />
 
+    <!--Lukknappen til infografikken - højre side-->
+    <div class="lukknap">
+      <img src="/images/krydsknap.png" alt="lukknap til info" />
+    </div>
+
+    <!--Det nederste på siden med planeterne og raketen der rykker sig imellem-->
+    <div id="planeterne">
+      <img
+        class="planetbilleder"
+        src="images/månenfuld.png"
+        alt="månen i fuld str."
+      />
+      <img
+        id="raketderflyver"
+        src="images/raketmedild.png"
+        alt="raket der flyver"
+      />
+      <p>- - - - - - - - - -</p>
+      <img
+        class="planetbilleder"
+        src="images/jordenfuld.png"
+        alt="jorden i fuld str."
+      />
+    </div>
+
+    <!--Score sektionen-->
+
+    <p id="score"></p>
+    <!-- Score vises her og opdateres i JavaScript -->
   </body>
 </html>

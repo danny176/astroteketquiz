@@ -47,9 +47,11 @@ p {
   height: auto;
 }
 
-
 /*style af de fire svarmuligheder*/
-#korrekt, #forkert_et, #forkert_to, #forkert_tre {
+#korrekt,
+#forkert_et,
+#forkert_to,
+#forkert_tre {
   padding: 10px;
   margin: 10px; /*space imellem knapperne*/
   border-radius: 40px;
@@ -59,10 +61,9 @@ p {
   font-size: 23px;
   font-style: normal;
   line-height: normal;
-  width: 260px; /* Fast bredde på knapperne */
+  width: 300px; /* Fast bredde på knapperne */
   height: 110px; /* Fast højde på knapperne */
   text-align: center; /* Centrerer teksten */
-  
 }
 
 /*de fire svarmuligheder - delt i to for at få placeringen som den er*/
@@ -141,4 +142,3 @@ p {
   right: 0;
   padding: 15px;
 }
-
