@@ -90,7 +90,7 @@ function checkAnswer(selectedIndex) {
   // Farvesætter svarene (grøn for korrekt, rød for forkert)
   updateButtonColors();
 
-  // Gå videre til næste spørgsmål efter en kort forsinkelse (1 sekund) - brugeren kan se om de har svaret rigtigt eller forkert
+  // Gå videre til næste spørgsmål efter en kort forsinkelse (0,7 sekund) - brugeren kan se om de har svaret rigtigt eller forkert
   setTimeout(() => {
     nuvaerendeStep++;
     if (nuvaerendeStep < quizData.length) {
@@ -144,7 +144,7 @@ function loadQuestion() {
   // Opdaterer knappernes farver (i tilfælde af navigering tilbage med pilene)
   updateButtonColors();
 
-    // Flytter raketten frem når man går et sprøgsmål frem starter ved 248 px og rykker 72 px pr gang
+    // Flytter raketten frem når man går et sprøgsmål frem starter ved 248 px og rykker 67 px pr gang
     document.getElementById("raketderflyver").style.left = `${248 + (67 * nuvaerendeStep)}px`;
 }
 
@@ -164,7 +164,7 @@ function checkAndDisplayResults() {
 // Initialiserer første spørgsmål
 loadQuestion();
 
-//Array som gemmer forside elementer når slideknap bliver klikket. Bliver gjort ved at tilføje gemforside class som har opacity 0 værdi.
+//Array som gemmer quizside elementer når slideknap bliver klikket. Bliver gjort ved at tilføje gemforside class som har opacity 0 værdi.
 document.querySelector(".slideknap").addEventListener("click", function () {
   const gemQuiz = [
     document.querySelector(".lukknapforside"),
@@ -181,7 +181,7 @@ document.querySelector(".slideknap").addEventListener("click", function () {
   });
 });
 
-//Hvis forside elementer når lukknap bliver klikket
+//Hvis quizside elementer når lukknap bliver klikket
 document.querySelector(".lukknap").addEventListener("click", function () {
   const gemQuiz = [
     document.querySelector(".lukknapforside"),
