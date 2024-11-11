@@ -144,7 +144,7 @@ function loadQuestion() {
     // Opdaterer knappernes farver (i tilfælde af navigering tilbage med pilene)
     updateButtonColors();
 
-    // Flytter raketten frem når man går et sprøgsmål frem starter ved 248 px og rykker 72 px pr gang
+    // Flytter raketten frem når man går et sprøgsmål frem starter ved 248 px og rykker 67 px pr gang, så det passer med stregerne
     document.getElementById("raketderflyver").style.left = `${248 + (67 * nuvaerendeStep)}px`;
 }
 
