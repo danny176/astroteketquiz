@@ -48,7 +48,7 @@ const quizData = [
         correct: 2
     },
     {
-        question: "På hvilken planet er en liter mælk tungest?",
+        question: "På hvilken planet er én l. mælk tungest?",
         options: ["Mars", "Jupiter", "Jorden", "Uranus"],
         correct: 1
     },
@@ -145,7 +145,7 @@ function loadQuestion() {
     updateButtonColors();
 
     // Flytter raketten frem når man går et sprøgsmål frem starter ved 248 px og rykker 72 px pr gang
-    document.getElementById("raketderflyver").style.left = `${248 + (72 * nuvaerendeStep)}px`;
+    document.getElementById("raketderflyver").style.left = `${248 + (67 * nuvaerendeStep)}px`;
 }
 
 // Tjekker og sender til vinder side, hvis score = 10/10 og loser siden, hvis score er 9/10 eller mindre
