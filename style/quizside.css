@@ -135,3 +135,23 @@ p {
   right: 0;
   padding: 15px;
 }
+
+#timerDisplay {
+  position: absolute;
+  z-index: 1;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--Hvid, #fff);
+  font-family: "Lilita One";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  border: solid white 4px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -9,3 +9,9 @@ if (score !== null) {
    scoreDisplay.textContent = "Ingen score fundet."; //skrives bare, hvis der ingen localstorage gemt er.
 }
 
+//Sætter en timeout til forsiden, så at score siden ikke bliver stående og folk ikke kan se hvad formålet er.
+
+setTimeout(() => {
+    window.location.href = "index.html";
+  }, 60000);
+  

@@ -4,6 +4,7 @@ const btn_korrekt = document.getElementById("korrekt");
 const btn_forkert_et = document.getElementById("forkert_et");
 const btn_forkert_to = document.getElementById("forkert_to");
 const btn_forkert_tre = document.getElementById("forkert_tre");
+const timerDisplay = document.getElementById("timerDisplay"); // Timer til at sætte tid på spørgsmålene
 
 const buttons = [btn_korrekt, btn_forkert_et, btn_forkert_to, btn_forkert_tre];
 
@@ -14,6 +15,8 @@ const pilmodhøjre = document.getElementById("pilmodhøjre");
 let score = 0;
 let nuvaerendeStep = 0;
 let userAnswers = []; // Array til at gemme brugerens svar (hvilket svar der blev valgt)
+let timer; // Variable til at gemme tidsintervallet
+let timeRemaining = 25; // Hvert spørgsmål har 20 sekunder
 
 // Array med spørgsmål og svarmuligheder 0, 1, 2, 3 indexer
 const quizData = [
@@ -102,6 +105,7 @@ const quizData = [
 // Tilføjer event listeners til knapperne
 buttons.forEach((button, index) => {
   button.addEventListener("click", () => checkAnswer(index));
+  clearInterval(timer); // Stop timer når du har valgt dit svar.
 });
 
 function checkAnswer(selectedIndex) {
@@ -141,10 +145,12 @@ function updateButtonColors() {
       if (index === quizData[nuvaerendeStep].correct) {
         button.style.backgroundColor = "green"; // Korrekt svar
         korrektSound.play(); //Lyd afspilles ved korrekt svar
-        
-        // Flyt raketten 67px når du svarer rigtig på spørgsmålet og bring det tættere 
+
+        // Flyt raketten 67px når du svarer rigtig på spørgsmålet og bring det tættere
         raketPosition += 67;
-        document.getElementById("raketderflyver").style.left = `${raketPosition}px`;
+        document.getElementById(
+          "raketderflyver"
+        ).style.left = `${raketPosition}px`;
       } else {
         button.style.backgroundColor = "red"; // Forkert svar
         forkertSound.play();
@@ -166,6 +172,10 @@ function loadQuestion() {
 
   // Opdaterer knappernes farver
   updateButtonColors();
+
+    // Reset og start timer for det nye spørgsmål
+    resetTimer();
+    startTimer();
 }
 
 // Tjekker og sender til vinder side, hvis score = 10/10 og loser siden, hvis score er 9/10 eller mindre
@@ -179,6 +189,24 @@ function checkAndDisplayResults() {
   } else {
     window.location.href = "loserside.html";
   }
+}
+
+function resetTimer() {
+  clearInterval(timer);
+  timeRemaining = 25;
+  timerDisplay.innerHTML = `${timeRemaining}`; // Hvis tiden på skærmen
+}
+
+function startTimer() {
+  timer = setInterval(() => {
+    timeRemaining--;
+    timerDisplay.innerHTML = `${timeRemaining}`;
+
+    if (timeRemaining <= 0) {
+      clearInterval(timer);
+      checkAnswer(-1); // User gets 0 points if timer runs out
+    }
+  }, 1000);
 }
 
 // Initialiserer første spørgsmål
