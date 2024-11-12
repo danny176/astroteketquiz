@@ -173,9 +173,9 @@ function loadQuestion() {
   // Opdaterer knappernes farver
   updateButtonColors();
 
-    // Reset og start timer for det nye spørgsmål
-    resetTimer();
-    startTimer();
+  // Reset og start timer for det nye spørgsmål
+  resetTimer();
+  startTimer();
 }
 
 // Tjekker og sender til vinder side, hvis score = 10/10 og loser siden, hvis score er 9/10 eller mindre
@@ -254,8 +254,10 @@ const lukKnap = document.querySelector(".lukknap");
 const planeterne = document.querySelector("#planeterne");
 const sprGem = document.querySelector("#spr");
 const fremTilbage = document.querySelector("#pilknapperne");
+const timerTekst = document.querySelector("#timerDisplay");
 
 slideKnap.addEventListener("click", function () {
+  timerTekst.style.opacity = "0";
   slidingImage.classList.add("slide-in");
   slideKnap.style.display = "none";
   lukKnap.style.display = "block";
@@ -267,6 +269,7 @@ slideKnap.addEventListener("click", function () {
 //Slide ud infografik når lukknap bliver trykket. Derudover gem lukknap og vis i stedet slideknap
 
 lukKnap.addEventListener("click", function () {
+  timerTekst.style.opacity = "1";
   slidingImage.classList.remove("slide-in");
   lukKnap.style.display = "none";
   slideKnap.style.display = "block";
