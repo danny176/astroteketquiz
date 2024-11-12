@@ -18,7 +18,7 @@ let userAnswers = []; // Array til at gemme brugerens svar (hvilket svar der ble
 // Array med spørgsmål og svarmuligheder 0, 1, 2, 3 indexer
 const quizData = [
   {
-    question: "Hvordan blev solen dannet?",
+    question: "1. Hvordan blev solen dannet?",
     options: [
       "I en stjernetåge",
       "Ved en eksplosion",
@@ -28,12 +28,12 @@ const quizData = [
     correct: 0,
   },
   {
-    question: "Hvilken farve er de varmeste stjerner?",
+    question: "2. Hvilken farve er de varmeste stjerner?",
     options: ["Grønne", "Blå", "Røde", "Gule"],
     correct: 1,
   },
   {
-    question: "Hvad er en supernova?",
+    question: "3. Hvad er en supernova?",
     options: [
       "En måde stjernerne bevæger sig på",
       "Når en planet bliver opslugt af et sort hul",
@@ -43,7 +43,7 @@ const quizData = [
     correct: 2,
   },
   {
-    question: "Hvordan kan et sort hul opstå?",
+    question: "4. Hvordan kan et sort hul opstå?",
     options: [
       "Det er uvist",
       "Når en planet eksploderer",
@@ -53,7 +53,7 @@ const quizData = [
     correct: 3,
   },
   {
-    question: "Hvad gør et sort hul?",
+    question: "5. Hvad gør et sort hul?",
     options: [
       "Det opsluger alt i nærheden",
       "Udsender lys igennem rummet",
@@ -63,7 +63,7 @@ const quizData = [
     correct: 0,
   },
   {
-    question: "Hvad er en exoplanet?",
+    question: "6. Hvad er en exoplanet?",
     options: [
       "En planet, der konstant skifter størrelse og farve",
       "En planet, der er ældre end solen",
@@ -73,22 +73,22 @@ const quizData = [
     correct: 2,
   },
   {
-    question: "På hvilken planet er en liter mælk tungest?",
+    question: "7. På hvilken planet er en liter mælk tungest?",
     options: ["Mars", "Jupiter", "Jorden", "Uranus"],
     correct: 1,
   },
   {
-    question: "Hvor lang tid tager det månen at kredse rundt om jorden?",
+    question: "8. Hvor lang tid tager det månen at kredse rundt om jorden?",
     options: ["30,1 dage", "60,5 dage", "27,3 dage", "12,7 dage"],
     correct: 2,
   },
   {
-    question: "Hvor mange jorddøgn er der på et døgn på Venus?",
+    question: "9. Hvor mange jorddøgn er der på et døgn på Venus?",
     options: ["321 jorddøgn", "75 jorddøgn", "5 jorddøgn", "243 jorddøgn"],
     correct: 3,
   },
   {
-    question: "Hvad er en meteorit?",
+    question: "10. Hvad er en meteorit?",
     options: [
       "En partikel fra et sort hul",
       "Rester fra solsystemets dannelse",
@@ -164,7 +164,7 @@ function loadQuestion() {
     buttons[index].innerHTML = option;
   });
 
-  // Opdaterer knappernes farver (i tilfælde af navigering tilbage med pilene)
+  // Opdaterer knappernes farver
   updateButtonColors();
 }
 
